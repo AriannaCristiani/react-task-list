@@ -1,4 +1,17 @@
 .header{
   background-color: aqua;
+  padding: 2px 2px;
+  font-size: 25px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.state {
   padding: 5px 5px;
+  background-color: rgb(209, 118, 0);
+  color: white;
 }

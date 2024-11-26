@@ -84,9 +84,11 @@ function App() {
    }
   })
   //console.log(currentTask)
+  const currentTaskCount = currentTask.length
 
   const completedTask = tasks.filter((task) => task.state === 'completed')
   //console.log(completedTask)
+  const completedTaskCount = completedTask.length
   
   
 
@@ -94,10 +96,16 @@ function App() {
     <>
       <section>
         <header className='header'>
-          <h1>Task Manager</h1>
+          <h1><strong>Task Manager</strong></h1>
         </header>
         <main>
-
+          <h2>Current Tasks ({currentTaskCount})</h2>
+          <ul>
+            <li>{currentTask[0].title} <span className='state'>{currentTask[0].state}</span></li>
+            <li>Priority: {currentTask[0].priority}</li>
+            <li>Est.time: {currentTask[0].estimatedTime} </li>
+          </ul>
+          
         </main>
       </section>
     </>
