@@ -23,19 +23,21 @@ function App() {
   return (
     <>
       <section>
+
         <header className='header'>
           <h1><strong>Task Manager</strong></h1>
         </header>
+
         <main className='main'>
           <h2>Current Tasks ({currentTaskCount})</h2>
           <ul>
             {currentTask.map(element => (
               <li key={element.id}>
-              <strong>{element.title}</strong><span className='state'>{element.state}</span>
-              <br />
-              Priority: {element.priority}
-              <br />
-              Est.time: {element.estimatedTime} 
+                <strong>{element.title}</strong><span className='state'>{element.state}</span>
+                <br />
+                Priority: {element.priority}
+                <br />
+                Est.time: {element.estimatedTime}
               </li>
             ))}
           </ul>
@@ -43,11 +45,21 @@ function App() {
           <hr />
 
           <h2>Current Tasks ({completedTaskCount})</h2>
-          <ul>
 
+          <ul>
+            {completedTask.map(element => (
+              <li key={element.id}>
+                <strong>{element.title}</strong><span className='state'>{element.state}</span>
+                <br />
+                Priority: {element.priority}
+                <br />
+                Est.time: {element.estimatedTime}
+              </li>
+            ))}
           </ul>
 
         </main>
+        
       </section>
     </>
   )
