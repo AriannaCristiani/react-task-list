@@ -44,12 +44,12 @@ function App() {
 
           <hr />
 
-          <h2>Current Tasks ({completedTaskCount})</h2>
+          <h2>Completed Tasks ({completedTaskCount})</h2>
 
           <ul>
             {completedTask.map(element => (
               <li key={element.id}>
-                <strong>{element.title}</strong><span className='state'>{element.state}</span>
+                <strong>{element.title}</strong><span className='state-completed'>{element.state}</span>
                 <br />
                 Priority: {element.priority}
                 <br />
@@ -59,7 +59,7 @@ function App() {
           </ul>
 
         </main>
-        
+
       </section>
     </>
   )
