@@ -1,80 +1,8 @@
 import './App.css'
+import tasks from './tasks'
 
 
 function App() {
-  const tasks = [
-    {
-      id: 1,
-      title: 'Implementare la homepage',
-      priority: 1,
-      estimatedTime: 120,
-      state: 'completed',
-    },
-    {
-      id: 2,
-      title: 'Sviluppare il menu di navigazione',
-      priority: 2,
-      estimatedTime: 60,
-      state: 'completed',
-    },
-    {
-      id: 3,
-      title: 'Creare il footer del sito',
-      priority: 3,
-      estimatedTime: 30,
-      state: 'completed',
-    },
-    {
-      id: 4,
-      title: 'Ottimizzare le performance',
-      priority: 1,
-      estimatedTime: 180,
-      state: 'completed',
-    },
-    {
-      id: 5,
-      title: 'Scrivere test per i componenti',
-      priority: 2,
-      estimatedTime: 90,
-      state: 'completed',
-    },
-    {
-      id: 6,
-      title: 'Implementare la pagina dei contatti',
-      priority: 3,
-      estimatedTime: 60,
-      state: 'completed',
-    },
-    {
-      id: 7,
-      title: 'Aggiungere animazioni CSS',
-      priority: 2,
-      estimatedTime: 30,
-      state: 'backlog',
-    },
-    {
-      id: 8,
-      title: "Integrare l'API di autenticazione",
-      priority: 1,
-      estimatedTime: 120,
-      state: 'in_progress',
-    },
-    {
-      id: 9,
-      title: 'Aggiornare la documentazione',
-      priority: 3,
-      estimatedTime: 60,
-      state: 'backlog',
-    },
-    {
-      id: 10,
-      title: 'Rifattorizzare il codice CSS',
-      priority: 2,
-      estimatedTime: 90,
-      state: 'in_progress',
-    },
-  ]
-  //console.log(tasks)
 
   const currentTask = tasks.filter((task) => {
    if(task.state === 'in_progress'){
@@ -98,12 +26,53 @@ function App() {
         <header className='header'>
           <h1><strong>Task Manager</strong></h1>
         </header>
-        <main>
-          <h2>Current Tasks ({currentTaskCount})</h2>
+        <main className='main'>
+        <h2>Current Tasks ({currentTaskCount})</h2>
           <ul>
-            <li>{currentTask[0].title} <span className='state'>{currentTask[0].state}</span></li>
+            <li><strong>{currentTask[0].title} </strong><span className='state'>{currentTask[0].state}</span></li>
             <li>Priority: {currentTask[0].priority}</li>
             <li>Est.time: {currentTask[0].estimatedTime} </li>
+
+            <li><strong>{currentTask[1].title}</strong><span className='state'>{currentTask[1].state}</span></li>
+            <li>Priority: {currentTask[1].priority}</li>
+            <li>Est.time: {currentTask[1].estimatedTime} </li>
+
+            <li><strong>{currentTask[2].title}</strong><span className='state'>{currentTask[2].state}</span></li>
+            <li>Priority: {currentTask[2].priority}</li>
+            <li>Est.time: {currentTask[2].estimatedTime} </li>
+
+            <li><strong>{currentTask[3].title}</strong><span className='state'>{currentTask[3].state}</span></li>
+            <li>Priority: {currentTask[3].priority}</li>
+            <li>Est.time: {currentTask[3].estimatedTime} </li>
+          </ul>
+
+          <hr />
+
+          <h2>Current Tasks ({completedTaskCount})</h2>
+          <ul>
+            <li><strong>{completedTask[0].title} </strong><span className='state'>{completedTask[0].state}</span></li>
+            <li>Priority: {completedTask[0].priority}</li>
+            <li>Est.time: {completedTask[0].estimatedTime} </li>
+
+            <li><strong>{completedTask[1].title}</strong><span className='state'>{completedTask[1].state}</span></li>
+            <li>Priority: {completedTask[1].priority}</li>
+            <li>Est.time: {completedTask[1].estimatedTime} </li>
+
+            <li><strong>{completedTask[2].title}</strong><span className='state'>{completedTask[2].state}</span></li>
+            <li>Priority: {completedTask[2].priority}</li>
+            <li>Est.time: {completedTask[2].estimatedTime} </li>
+
+            <li><strong>{completedTask[3].title}</strong><span className='state'>{completedTask[3].state}</span></li>
+            <li>Priority: {completedTask[3].priority}</li>
+            <li>Est.time: {completedTask[3].estimatedTime} </li>
+
+            <li><strong>{completedTask[4].title}</strong><span className='state'>{completedTask[4].state}</span></li>
+            <li>Priority: {completedTask[4].priority}</li>
+            <li>Est.time: {completedTask[4].estimatedTime} </li>
+
+            <li><strong>{completedTask[5].title}</strong><span className='state'>{completedTask[5].state}</span></li>
+            <li>Priority: {completedTask[5].priority}</li>
+            <li>Est.time: {completedTask[5].estimatedTime} </li>
           </ul>
           
         </main>
